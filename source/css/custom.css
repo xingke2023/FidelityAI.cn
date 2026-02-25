@@ -1,0 +1,375 @@
+/* 
+   FidelityAI - CINEMA DESIGN SYSTEM 2026
+   ====================================== */
+
+:root {
+  --cinema-bg: #000000;
+  --cinema-text: #ffffff;
+  --cinema-accent: #6366f1;
+  --cinema-accent-alt: #2dd4bf;
+  --cinema-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  --cinema-glass: rgba(255, 255, 255, 0.03);
+  --cinema-border: rgba(255, 255, 255, 0.08);
+}
+
+/* 基础重置 */
+body {
+  background-color: var(--cinema-bg) !important;
+  color: var(--cinema-text) !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+}
+
+#board, .board {
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+}
+
+/* 彻底移除 Fluid 主题自带的 Banner 占位容器及周边空白 */
+#banner {
+  display: none !important;
+}
+
+#main, #main-container, .main-container, #body-wrap {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+#board {
+  margin-top: 80px !important;
+  padding-top: 2rem !important;
+  padding-bottom: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.header-inner {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* 只隐藏 banner 部分，保留导航 */
+.header-inner .banner,
+.header-inner #banner,
+.header-inner .banner-text,
+.header-inner .scroll-down-bar {
+  display: none !important;
+}
+
+/* ── 导航栏（浮在 cinema-layout 之上）── */
+#navbar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
+  height: 64px !important;
+  display: flex !important;
+  align-items: center !important;
+  background: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  transition: background 0.3s ease;
+  padding: 0 6% !important;
+}
+
+#navbar .container {
+  max-width: 100% !important;
+  padding: 0 !important;
+  height: 64px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+#navbar .navbar-brand-group,
+#navbar .navbar-collapse,
+#navbar .container-fluid {
+  height: 64px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.navbar-brand {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  color: #fff !important;
+  text-transform: uppercase;
+}
+
+.navbar-nav .nav-link {
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.04em !important;
+  color: rgba(255, 255, 255, 0.45) !important;
+  padding: 0.4rem 1.2rem !important;
+  transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-shadow: none;
+}
+
+/* 隐藏导航栏图标 */
+.navbar-nav .nav-link .iconfont {
+  display: none !important;
+}
+
+/* 隐藏搜索和主题切换按钮 */
+#navbar .navbar-search, #navbar .navbar-toggle-theme {
+  opacity: 0.4;
+  transition: opacity 0.2s;
+}
+#navbar .navbar-search:hover, #navbar .navbar-toggle-theme:hover {
+  opacity: 1;
+}
+
+
+/* cinema-layout 覆盖整个视口，导航栏浮在上面 */
+.cinema-layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 100;
+  background: #000;
+}
+
+/* 01. CINEMA HERO */
+.cinema-hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #000;
+  position: relative;
+  padding-top: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 10vw, 8rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.05em !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  background: linear-gradient(to bottom, #fff 40%, rgba(255, 255, 255, 0.3) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 40px rgba(99, 102, 241, 0.2));
+}
+
+.hero-subtitle {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.btn-secondary-link {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.4) !important;
+  text-decoration: none !important;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease;
+}
+
+.btn-secondary-link:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.btn-main-glow {
+  padding: 1.2rem 3.5rem;
+  background: #fff;
+  color: #000 !important;
+  font-weight: 800;
+  border-radius: 100px;
+  text-decoration: none !important;
+  box-shadow: 0 0 30px rgba(255,255,255,0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-main-glow:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 50px rgba(255,255,255,0.5);
+}
+
+/* 02. CINEMA VISION */
+.cinema-vision {
+  padding: 20vh 10%;
+  text-align: center;
+}
+
+.reveal-text {
+  font-size: clamp(2rem, 5vw, 4rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  max-width: 1000px;
+  margin: 0 auto 3rem !important;
+}
+
+.reveal-text span {
+  background: var(--cinema-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.vision-desc {
+  font-size: 1.25rem;
+  color: rgba(255,255,255,0.5);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* 03. CAPABILITIES GRID */
+.cinema-capabilities {
+  padding: 10vh 5%;
+}
+
+.cap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cap-item {
+  background: var(--cinema-glass);
+  border: 1px solid var(--cinema-border);
+  border-radius: 40px;
+  padding: 4rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.cap-item:hover {
+  border-color: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.05);
+  transform: translateY(-10px);
+}
+
+.cap-item.large { grid-column: span 2; }
+.cap-item.wide { grid-column: span 3; }
+
+.cap-num {
+  font-size: 1rem;
+  color: var(--cinema-accent);
+  font-weight: 800;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.cap-item h3 {
+  font-size: 2rem !important;
+  margin-bottom: 1rem !important;
+  font-weight: 800 !important;
+}
+
+.cap-item p {
+  color: rgba(255,255,255,0.6);
+  font-size: 1.1rem;
+}
+
+/* 04. CINEMA GATEWAY */
+.cinema-gateway {
+  padding: 20vh 10%;
+}
+
+.gateway-card {
+  background: linear-gradient(135deg, #111 0%, #000 100%);
+  border: 1px solid var(--cinema-border);
+  border-radius: 60px;
+  padding: 8rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.gateway-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem) !important;
+  font-weight: 900 !important;
+  margin-bottom: 2rem !important;
+}
+
+.gateway-title span {
+  color: var(--cinema-accent-alt);
+}
+
+.btn-super-portal {
+  display: inline-flex;
+  align-items: center;
+  gap: 2rem;
+  background: var(--cinema-gradient);
+  padding: 1.5rem 4rem;
+  border-radius: 100px;
+  color: #fff !important;
+  text-decoration: none !important;
+  font-size: 1.5rem;
+  font-weight: 800;
+  transition: all 0.4s ease;
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+}
+
+.btn-super-portal:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 30px 60px rgba(99, 102, 241, 0.5);
+}
+
+/* 响应式适配 */
+@media (max-width: 992px) {
+  .cap-grid { grid-template-columns: 1fr; }
+  .cap-item.large, .cap-item.wide { grid-column: span 1; }
+  #navbar { height: 80px !important; }
+}
+
+.page-content > h1, .post-header { display: none !important; }
+#banner .banner-text, .page-header, .post-header { display: none !important; }
+.page-content { padding-top: 0 !important; margin-top: 0 !important; }
+#board .row { margin: 0 !important; }
+#board .col-12 { padding: 0 !important; }
+footer, #footer { display: none !important; }
+#scroll-top-button { display: none !important; }
+
+/* 所有页面的 #board 容器留出导航栏高度 */
+.container.nopadding-x-md {
+  padding-top: 80px !important;
+}
+
+#board {
+  padding-top: 80px !important;
+}
+
+/* 首页有 cinema-layout，覆盖掉 #board 的 padding（cinema-layout 自己是 fixed） */
+.cinema-layout {
+  /* 已在上方定义 */
+}
