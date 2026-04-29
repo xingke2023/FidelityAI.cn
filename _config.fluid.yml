@@ -5,8 +5,7 @@ navbar:
   blog_title: "FidelityAI"
   menu:
     - { key: "首页", link: "/", icon: "iconfont icon-home-fill" }
-    - { key: "产品功能", link: "/features/", icon: "iconfont icon-sitemap-fill" }
-    - { key: "开发文档", link: "https://tokens.fidelityai.net/docs-fidelityai.html", icon: "iconfont icon-book-fill", target: "_blank" }
+    - { key: "服务项目", link: "/#services", icon: "iconfont icon-grid-fill" }
     - { key: "关于我们", link: "/about/", icon: "iconfont icon-user-fill" }
     - { key: "联系我们", link: "/contact/", icon: "iconfont icon-mail-fill" }
 
@@ -34,16 +33,16 @@ post:
 
 # About page settings
 about:
-  banner_img: https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=90
-  banner_img_height: 50
-  banner_mask_alpha: 0.6
+  banner_img:
+  banner_img_height: 0
+  banner_mask_alpha: 0
   layout: post
 
 # Contact page settings
 contact:
-  banner_img: https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=90
-  banner_img_height: 50
-  banner_mask_alpha: 0.6
+  banner_img:
+  banner_img_height: 0
+  banner_mask_alpha: 0
   layout: post
 
 # Features page settings

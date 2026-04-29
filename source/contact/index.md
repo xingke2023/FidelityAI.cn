@@ -63,3 +63,6 @@ layout: page
 </div>
 </div>
 </div>
+<footer class="cinema-footer">
+  <p>© 2025 FidelityAI Company. All rights reserved.</p>
+</footer>
