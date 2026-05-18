@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: FidelityAI | 统一大模型接口网关 - 赋能企业智能
+title: FidelityAI
 subtitle: 为企业提供安全、高效、统一的大语言模型 API 接入与管理平台
 description: 'FidelityAI 统一大模型接口网关，致力于为企业打造稳定、安全、高效的 AI 基础设施，助力企业轻松接入主流大模型，实现智能业务创新。'
 keywords: 保险, 理赔分流, AI, 人工智能, 保险科技
@@ -13,7 +13,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://www.fidelityai.cn/
+url: https://www.fidelityai.net/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:

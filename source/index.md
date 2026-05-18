@@ -1,5 +1,5 @@
 ---
-title: 
+title: FidelityAI
 hide_title: true
 date: 2026-02-25 20:00:00
 layout: page
@@ -73,7 +73,7 @@ layout: page
 
   <!-- FOOTER -->
   <footer class="cinema-footer">
-    <p>© 2025 FidelityAI Company. All rights reserved.</p>
+    <p>© 2026 FidelityAI Company. All rights reserved.</p>
   </footer>
 
 </div>
